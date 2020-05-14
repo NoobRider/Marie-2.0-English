@@ -18,19 +18,9 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-hoi {}, my name is {}! if you have any questions about how to use me please give me /help... 
+ഹായ് {}, എന്റെ പേര് {}! ഞാൻ [ഇദ്ദേഹം](tg://user?id={}) നോക്കി നടത്തുന്ന ഒരു അടിപൊളി അഡ്മിൻ ബോട്ടാണ്.
 
-im a group manager bot maintained by  [this person](tg://user?id={}).
-
-My future updates will be put into This Channel - @MarieChechi & My Support Group @InFoTelGroup.
-
-This is my [Deploy Code](https://heroku.com/deploy?template=https://github.com/TGExplore/Marie-2.0-English),
-you can create clone same like me..
-
-For more commands click /help...
-
-**Keep in mind that any changes you DO do to the source have to be on github, as per the license.**
-
+ലഭ്യമായ കമാന്റുകളെപ്പറ്റി അറിയുവാൻ /help അമർത്തുക.
 """
 
 HELP_STRINGS = """
@@ -40,10 +30,21 @@ Hello! my name *{}*.
 *Main* available commands:
  - /start: Start the bot...
  - /help: help....
- - /donate: To find out more about donating!
- - /settings:
-   - in PM: To find out what SETTINGS you have set....
-   - in a group:
+============================
+
+*Our Channels and Groups*
+
+      Channels
+  🧸@Cinemavilla
+  🧸@CMV_Tv
+  🧸@CMV_MoneyHeist
+  🧸@CMV_Marvel
+  🧸@CMV_malayalam
+  🧸@CMV_ALL
+  🧸@CMV_Old
+  
+      Group
+  🗡️@CM_Villa
 
 {}
 And the following:
@@ -143,7 +144,8 @@ def start(bot: Bot, update: Update, args: List[str]):
             first_name = update.effective_user.first_name
             update.effective_message.reply_text(
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-                parse_mode=ParseMode.MARKDOWN)
+                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="♻️ADD ME TO YOUR GROUP♻️",
+                                                                       url="t.me/{}?startgroup=true".format(bot.username))]]))
     else:
         update.effective_message.reply_text("waked up😏😏😏")
 
