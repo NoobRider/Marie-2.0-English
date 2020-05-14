@@ -22,20 +22,6 @@ PM_START_TEXT = """
 
 ലഭ്യമായ കമാന്റുകളെപ്പറ്റി അറിയുവാൻ /help അമർത്തുക.
 
-°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-*Our Channels and Groups*
-      Channels™
-  🧸@Cinemavilla
-  🧸@CMV_Tv
-  🧸@CMV_MoneyHeist
-  🧸@CMV_Marvel
-  🧸@CMV_malayalam
-  🧸@CMV_ALL
-  🧸@CMV_Old
-°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
-      Group™
-  🗡️@CM_Villa
-°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
 """
 
 HELP_STRINGS = """
